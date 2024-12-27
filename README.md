@@ -5,7 +5,7 @@ Ce projet vise à développer une solution complète pour gérer un logement con
 - Un frontend interactif avec Nuxt.js pour permettre aux utilisateurs de visualiser et contrôler leurs données.
 - Une base de données SQLite pour stocker toutes les informations nécessaires.
 
-Ce projet a été réalisé dans le cadre du TP IoT à Sorbonne Université.
+Ce projet a été réalisé dans le cadre du TP IoT.
 
 ---
 
@@ -14,14 +14,14 @@ Ce projet a été réalisé dans le cadre du TP IoT à Sorbonne Université.
 - Gestion des dispositifs connectés : ajout, suppression, visualisation.
 - Visualisation des consommations énergétiques.
 - Suivi des économies réalisées grâce aux dispositifs éco-responsables.
-- Configuration et gestion des pièces et logements.
+- Configuration et gestion des logements.
 
 ---
 
 ## 📁 Structure du Projet
 
 - **Backend_et_BDD_Amina/** :
-  - `FastAPI.py` : Code du serveur backend.
+  - `backend.py` : Code du serveur backend.
   - `logement.sql` : Script SQL pour créer la base de données.
   - `remplissage.py` : Script pour insérer des données fictives dans la base de données.
 - **Frontend_Amina/** :
