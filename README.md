@@ -1,31 +1,49 @@
 # Logement Éco-Responsable - Projet IoT
 
-Ce projet a été réalisé par moi : **Amina Zarroug** dans le cadre du TP IoT "Logement Éco-Responsable". Il combine un site web, un serveur backend et une base de données pour la gestion d'un logement connecté et éco-responsable.
+Ce projet vise à développer une solution complète pour gérer un logement connecté et éco-responsable. Il intègre :
+- Un backend RESTful avec FastAPI pour gérer les dispositifs, logements et consommations.
+- Un frontend interactif avec Nuxt.js pour permettre aux utilisateurs de visualiser et contrôler leurs données.
+- Une base de données SQLite pour stocker toutes les informations nécessaires.
+
+Ce projet a été réalisé dans le cadre du TP IoT à Sorbonne Université.
 
 ---
 
-## 🏠 Structure du Projet
+## 🌟 Fonctionnalités
 
-Le projet est organisé en deux parties principales :
-
-1. **Backend et Base de Données** :
-   - Serveur RESTful développé avec FastAPI.
-   - Base de données SQLite pour stocker les logements, dispositifs, mesures, etc.
-   - Fichiers : code backend, script SQL et remplissage automatique de données.
-   - Explications dans le dossier `Backend_et_BDD_Amina/README.md`.
-
-2. **Frontend** :
-   - Site web interactif développé avec Nuxt.js pour gérer les dispositifs, visualiser les consommations et configurer les logements.
-   - Explications dans le dossier `Frontend_Amina/README.md`.
+- Gestion des dispositifs connectés : ajout, suppression, visualisation.
+- Visualisation des consommations énergétiques.
+- Suivi des économies réalisées grâce aux dispositifs éco-responsables.
+- Configuration et gestion des pièces et logements.
 
 ---
 
-## 📦 Installation et Utilisation
+## 📁 Structure du Projet
 
-### 1. Cloner le Repository
+- **Backend_et_BDD_Amina/** :
+  - `FastAPI.py` : Code du serveur backend.
+  - `logement.sql` : Script SQL pour créer la base de données.
+  - `remplissage.py` : Script pour insérer des données fictives dans la base de données.
+- **Frontend_Amina/** :
+  - `mon-site-iot/` :
+    - `pages/` : Contient les pages principales du site web.
+    - `components/` : Contient les composants réutilisables.
+    - `public/` : Contient les images et ressources statiques.
+- **README.md** : Ce fichier contient une description générale du projet.
 
-Clonez ce projet sur votre machine :
+---
 
+## ⚙️ Pré-requis
+
+- Python 3.9 ou supérieur
+- Node.js 16 ou supérieur
+- SQLite3 installé sur votre machine
+
+---
+
+## 🚀 Installation
+
+### 1. Clonez le repository
 ```bash
-git clone <https://github.com/Aminazarroug/Logement_EcoResponsable_Amina_ZARROUG>
+git clone https://github.com/Aminazarroug/Logement_EcoResponsable_Amina_ZARROUG.git
 cd Logement_EcoResponsable_Amina_ZARROUG
