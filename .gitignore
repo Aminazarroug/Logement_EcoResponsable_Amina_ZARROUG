@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+dist/
+.nuxt/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS-specific files
+.DS_Store
+desktop.ini
+Thumbs.db
+
+# Logs
+*.log
+
+# SQLite journal files (mais PAS mon fichier Amina.db)
+*.db-journal
