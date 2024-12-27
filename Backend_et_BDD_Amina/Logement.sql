@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS Facture;
 
 -- Création des Tables :
 
--- Table Logement : Inclut les colonnes existantes et identifiants uniques pour chaque utilisateur
+-- Table Logement : Inclut des identifiants uniques pour chaque utilisateur
 CREATE TABLE Logement (
     ID_Logement INTEGER PRIMARY KEY AUTOINCREMENT,
     Adresse VARCHAR(255),
@@ -87,7 +87,7 @@ VALUES
     ('Cuisine', 0.0, 10.0, 0, 1),
     ('Bureau', 0.0, 0.0, 0, 2),
     ('Salon', 0.0, 10.0, 0, 2),
-    ('Cuisine', 0.0, 0.0, 0, 1),
+    ('Bureau', 0.0, 0.0, 0, 1),
     ('Balcon', 0.0, 10.0, 0, 2);
 
 -- Insertion des types de devices
@@ -104,17 +104,17 @@ VALUES
 -- Insertion des devices
 INSERT INTO Device (ID_Pièce, ID_Type, Référence_commerciale, Port_communication, ID_Logement)
 VALUES
-    (1, 2, 'ELEC_3302', 'COM4', 1),
-    (2, 1, 'TEMP_2023', 'COM5', 1),
-    (5, 4, 'GAZ_2028', 'COM7', 1),
-    (1, 3, 'PRES_0376', 'COM9', 1),
+    (1, 2, 'ELEC_3302', 'COM4', 1),  --Logement 1 pièce 1  
+    (2, 1, 'TEMP_2023', 'COM5', 1),    --Logement 1 pièce 2 
+    (5, 4, 'GAZ_2028', 'COM7', 1),   --Logement 1 pièce 5 
+    (1, 3, 'PRES_0376', 'COM9', 1),     
     (2, 5, 'LUM_4810', 'COM2', 1),
     (5, 7, 'EAU_5634', 'COM10', 1),
-    (3, 2, 'ELEC_3502', 'COM3', 2),
-    (4, 1, 'TEMP_2VC23', 'COM12', 2),
+    (3, 2, 'ELEC_3502', 'COM3', 2),    --Logement 2 pièce 3
+    (4, 1, 'TEMP_2VC23', 'COM12', 2),   --Logement 2 pièce 4
     (3, 4, 'GAZ_20F28', 'COM11', 2),
     (4, 3, 'PRES_3D476', 'COM8', 2),
-    (6, 5, 'LUM_481DF0', 'COM6', 2),
+    (6, 5, 'LUM_481DF0', 'COM6', 2),    --Logement 2 pièce 6
     (6, 7, 'EAU_5DF634', 'COM13', 2);
 
 
