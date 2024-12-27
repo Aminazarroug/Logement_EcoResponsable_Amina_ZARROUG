@@ -27,5 +27,5 @@ Le projet est organisé en deux parties principales :
 Clonez ce projet sur votre machine :
 
 ```bash
-git clone <URL-du-repository>
+git clone <https://github.com/Aminazarroug/Logement_EcoResponsable_Amina_ZARROUG>
 cd Logement_EcoResponsable_Amina_ZARROUG
