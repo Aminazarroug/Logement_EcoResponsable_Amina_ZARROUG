@@ -108,7 +108,7 @@
  * IMPORTATIONS
  **********************************************/
 import { onMounted, ref } from "vue";
-import NavigationBar from "@/components/NavigationBar.vue"; // Assurez-vous que le chemin est correct
+import NavigationBar from "@/components/NavigationBar.vue"; 
 
 /**********************************************
  * VARIABLES REACTIVES

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Header avec menu amélioré -->
+    <!-- Header avec menu  -->
     <header class="bg-green-600 text-white py-4">
       <div class="container mx-auto flex justify-between items-center">
         <!-- Logo avec icône -->
@@ -22,7 +22,7 @@
       </div>
     </header>
 
-    <!-- Section Hero avec grande image -->
+    <!-- Section du début avec grande image -->
     <section class="relative">
       <!-- Image en arrière-plan -->
       <img src="/public/hero-image.jpg" alt="Hero" class="w-full h-[600px] object-cover" />
