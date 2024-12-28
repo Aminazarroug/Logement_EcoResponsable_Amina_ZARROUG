@@ -5,16 +5,24 @@ Ce projet vise à développer une solution complète pour gérer un logement con
 - Un frontend interactif avec Nuxt.js pour permettre aux utilisateurs de visualiser et contrôler leurs données.
 - Une base de données SQLite pour stocker toutes les informations nécessaires.
 
-Ce projet a été réalisé dans le cadre du TP IoT.
+Ce projet a été réalisé dans le cadre du **TP IoT**.
 
 ---
 
 ## 🌟 Fonctionnalités
 
-- Gestion des dispositifs connectés : ajout, suppression, visualisation.
-- Visualisation des consommations énergétiques.
-- Suivi des économies réalisées grâce aux dispositifs éco-responsables.
-- Configuration et gestion des logements.
+- **Gestion des dispositifs connectés** : Ajout, suppression et visualisation des capteurs et actionneurs.
+- **Visualisation des consommations énergétiques** : Électricité, gaz, eau, etc.
+- **Suivi des économies réalisées** : Analyse des économies financières et environnementales grâce aux dispositifs connectés.
+- **Configuration des logements** : Gestion des pièces et des dispositifs dans chaque logement.
+
+---
+
+## 📷 Aperçu du Site
+
+![Aperçu du Site](./public/site-preview.jpg)
+
+Voici une capture d'écran du site fonctionnel, montrant la page d'accueil principale. L'interface est intuitive, moderne et adaptée aux écrans mobiles.
 
 ---
 
@@ -35,15 +43,26 @@ Ce projet a été réalisé dans le cadre du TP IoT.
 
 ## ⚙️ Pré-requis
 
-- Python 3.9 ou supérieur
-- Node.js 16 ou supérieur
-- SQLite3 installé sur votre machine
+Avant de démarrer le projet, assurez-vous d'avoir les outils suivants installés sur votre machine :
+
+- **Python 3.11** (pour le backend)
+- **Node.js 16 ou supérieur** (pour le frontend)
+- **SQLite3** (pour gérer la base de données)
+
+---
+## 🛠️ Testez l'Espace Client avec un compte de test
+
+Pour effectuer un premier test sur l'Espace Client, vous pouvez utiliser les identifiants suivants :
+
+- **Email** : `aminazarroug@gmail.com`
+- **Mot de passe** : `hello123`
 
 ---
 
-## 🚀 Installation
 
-### 1. Clonez le repository
+## 🚀 Installation 
+
+### Clonez le repository
 ```bash
 git clone https://github.com/Aminazarroug/Logement_EcoResponsable_Amina_ZARROUG.git
 cd Logement_EcoResponsable_Amina_ZARROUG
