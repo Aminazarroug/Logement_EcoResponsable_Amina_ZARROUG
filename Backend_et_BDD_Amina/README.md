@@ -87,7 +87,7 @@ Ce répertoire contient l'implémentation du backend pour le projet **Logement �
      ```bash
      python remplissage.py
      ```
-   - Ce script générera des données fictives (température, humidité, consommation, etc.) pour les capteurs des logements.
+   - Ce script générera des données fictives (température, consommation, etc.) pour les capteurs des logements.
 
 4. **Tester les Routes API**
    - Une fois le backend et les données fictives en place, vous pouvez utiliser les outils de test comme Swagger ([http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)) ou Postman pour vérifier les routes et leur bon fonctionnement.
