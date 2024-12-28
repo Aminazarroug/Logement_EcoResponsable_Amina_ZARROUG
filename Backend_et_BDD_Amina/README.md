@@ -88,6 +88,7 @@ Ce répertoire contient l'implémentation du backend pour le projet **Logement �
      python remplissage.py
      ```
    - Ce script générera des données fictives (température, consommation, etc.) pour les capteurs des logements.
+   Attention ! L'exécution de ce code est d'une importance capitale pour pouvoir visualiser les consommations et les économies. Vous devez obligatoirement le lancer.
 
 ---
 

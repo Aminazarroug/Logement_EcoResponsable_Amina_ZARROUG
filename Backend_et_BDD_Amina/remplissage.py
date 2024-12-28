@@ -3,7 +3,7 @@ import random
 from datetime import datetime, timedelta
 
 # Connexion à la base de données SQLite
-db_path = "C:/Users/amina/Desktop/Logement_EcoResponsable_Amina_ZARROUG/Backend_et_BDD_Amina/Amina.db"  
+db_path = "Amina.db"  
 conn = sqlite3.connect(db_path)
 c = conn.cursor()
 

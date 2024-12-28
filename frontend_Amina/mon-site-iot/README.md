@@ -97,3 +97,10 @@ Assurez-vous que les outils suivants sont installés sur votre machine :
 - Assistance avec **ChatGPT** dans l'apprentissage d'utilisation de Nuxt.js.
 
 ---
+
+## Remarque importante
+
+- Pour le test de l'ajout de dispositifs, il est important de respecter la répartition des pièces par logement : 
+- **Logement 1** : ID des pièces uniquement 1, 2 et 5. 
+- **Logement 2** : ID des pièces uniquement 3, 4 et 6. 
+
