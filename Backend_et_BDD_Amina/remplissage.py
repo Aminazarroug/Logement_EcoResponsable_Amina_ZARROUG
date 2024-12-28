@@ -3,7 +3,7 @@ import random
 from datetime import datetime, timedelta
 
 # Connexion à la base de données SQLite
-db_path = "C:/Users/amina/Desktop/TP1 Hilaire/Src/Amina.db"  # Remplacez par votre chemin
+db_path = "C:/Users/amina/Desktop/Logement_EcoResponsable_Amina_ZARROUG/Backend_et_BDD_Amina/Amina.db"  
 conn = sqlite3.connect(db_path)
 c = conn.cursor()
 
@@ -18,8 +18,6 @@ def generate_date(start_date, end_date):
 def generate_value(type_name):
     if type_name == 'Température':
         return round(random.uniform(10, 40), 2)  # Température en °C
-    elif type_name == 'Humidité':
-        return round(random.uniform(30, 80), 2)  # Humidité en %
     elif type_name == 'Électricité':
         return round(random.uniform(1, 10), 2)  # Consommation en kWh
     elif type_name == 'Gaz':
