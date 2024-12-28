@@ -1,0 +1,8 @@
+# FastAPI : Framework Python pour créer des API RESTful
+fastapi==0.95.2
+
+# Pydantic : Utilisé avec FastAPI pour définir et valider des modèles de données
+pydantic==1.10.7
+
+# Uvicorn : Serveur pour exécuter les applications FastAPI
+uvicorn==0.22.0
