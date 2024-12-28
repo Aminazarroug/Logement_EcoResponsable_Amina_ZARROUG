@@ -1,9 +1,11 @@
+#Importation des bibliothèques nécessaires 
 from fastapi import FastAPI, HTTPException, Query, File, UploadFile
 from pydantic import BaseModel
 import sqlite3
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI()
+#Création de l'application FastAPI
+app = FastAPI() 
 
 # Middleware CORS pour gérer les requêtes préflight et autoriser les origines croisées
 app.add_middleware(
@@ -13,6 +15,10 @@ app.add_middleware(
     allow_methods=["*"],  # Autoriser toutes les méthodes HTTP
     allow_headers=["*"],  # Autoriser tous les en-têtes
 )
+
+#********************************************************************************************************
+# LOGIN
+#********************************************************************************************************
 
 # Modèle pour les données de connexion
 class LoginRequest(BaseModel):
@@ -30,7 +36,7 @@ def get_db_connection():
 def login(request: LoginRequest):
     """
     Authentifie un utilisateur avec son email et mot de passe.
-    Retourne les détails du logement associé.
+    Retourne les détails du logement associé  si l'authentification est réussie.
     """
     conn = get_db_connection()
     try:
@@ -45,7 +51,7 @@ def login(request: LoginRequest):
         if not logement:
             raise HTTPException(status_code=401, detail="Email ou mot de passe invalide")
 
-        # Ajouter le chemin de l'image du logement
+        # Chemin de l'image du logement
         image_path = f'/public/{logement["ID_Logement"]}.png'
 
 
@@ -64,6 +70,13 @@ def login(request: LoginRequest):
         raise HTTPException(status_code=500, detail=f"Erreur de base de données : {str(e)}")
     finally:
         conn.close()
+
+
+
+#********************************************************************************************************
+# DEVICES
+#********************************************************************************************************
+
 
 @app.post("/devices")
 def get_devices(request: LoginRequest):
@@ -117,8 +130,6 @@ def get_devices(request: LoginRequest):
     finally:
         conn.close()
 
-
-
 # Route OPTIONS pour gérer les requêtes preflight
 @app.options("/{full_path:path}")
 def preflight_handler():
@@ -126,8 +137,6 @@ def preflight_handler():
     Gère les requêtes OPTIONS pour les vérifications CORS (préflight).
     """
     return {"message": "Préflight CORS handled"}
-
-
 
 
 # Route pour récupérer la liste des types de capteurs (exclut les actionneurs)
@@ -146,6 +155,12 @@ def get_sensor_types():
         raise HTTPException(status_code=500, detail=f"Erreur de base de données : {str(e)}")
     finally:
         conn.close()
+
+
+#********************************************************************************************************
+# MESURES
+#********************************************************************************************************
+
 
 # Route pour récupérer les mesures selon le type de capteur et la période
 @app.get("/consommation")
@@ -215,7 +230,13 @@ def get_measurements(
         raise HTTPException(status_code=500, detail=f"Erreur de base de données : {str(e)}")
     finally:
         conn.close()
-        
+    
+    
+#********************************************************************************************************
+# ECONOMIES
+#********************************************************************************************************
+
+    
 @app.get("/economies/consommation")
 def get_economies_consommation(date: str, periode: str = Query("mensuelle", description="Période d'analyse")):
     """
@@ -285,6 +306,10 @@ def get_economies_consommation(date: str, periode: str = Query("mensuelle", desc
     finally:
         conn.close()
 
+
+#********************************************************************************************************
+# AJOUT ET SUPRESSION DE DEVICES
+#********************************************************************************************************
 
 class DeviceRequest(BaseModel):
     id_piece: int
@@ -372,6 +397,11 @@ def get_device_types():
         conn.close()
 
 
+#********************************************************************************************************
+# NOUVEAU LOGEMENT
+#********************************************************************************************************
+
+
 class SimpleLogementRequest(BaseModel):
     adresse: str
     telephone: str
@@ -382,7 +412,7 @@ class SimpleLogementRequest(BaseModel):
 @app.post("/logements")
 def create_logement(logement: SimpleLogementRequest):
     """
-    Insère un nouveau logement avec un ID + 1000.
+    Insère un nouveau logement 
     """
     conn = get_db_connection()
     try:
@@ -403,8 +433,8 @@ def create_logement(logement: SimpleLogementRequest):
         )
         conn.commit()
 
-        # Récupérer l'ID du logement nouvellement créé et ajouter 1000
-        logement_id = cursor.lastrowid + 1000
+        # Récupérer l'ID du logement nouvellement créé 
+        logement_id = cursor.lastrowid 
 
         return {"message": "Logement créé avec succès", "id_logement": logement_id}
     except sqlite3.Error as e:
