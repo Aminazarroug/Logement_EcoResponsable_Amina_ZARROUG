@@ -14,13 +14,13 @@ Ce projet a été réalisé dans le cadre du **TP IoT**.
 - **Gestion des dispositifs connectés** : Ajout, suppression et visualisation des capteurs et actionneurs.
 - **Visualisation des consommations énergétiques** : Électricité, gaz, eau, etc.
 - **Suivi des économies réalisées** : Analyse des économies financières et environnementales grâce aux dispositifs connectés.
-- **Configuration des logements** : Gestion des pièces et des dispositifs dans chaque logement.
+- **Configuration des logements** : Gestion des informations de chaque logement.
 
 ---
 
 ## 📷 Aperçu du Site
 
-![Aperçu du Site](./public/site-preview.jpg)
+![Aperçu du Site](.frontend_Amina/mon-site-iot/public/site-preview.jpg)
 
 Voici une capture d'écran du site fonctionnel, montrant la page d'accueil principale. L'interface est intuitive, moderne et adaptée aux écrans mobiles.
 
