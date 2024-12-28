@@ -69,6 +69,6 @@ Le fichier `FastAPI.py` implémente un serveur backend RESTful avec plusieurs en
   - Générer un graphique camembert des factures avec l'endpoint `/factures/chart` (via Google Charts).
 
 #### **Comment démarrer le serveur ?**
-1. Lancez le serveur en exécutant la commande suivante :
+Lancez le serveur en exécutant la commande suivante :
    ```bash
    uvicorn FastAPI:app --reload --host 127.0.0.1 --port 8000
