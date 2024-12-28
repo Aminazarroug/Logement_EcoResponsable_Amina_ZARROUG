@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Base URL de l'API
+BASE_URL="http://127.0.0.1:8000"
+
+echo "Alimentation de la base de données via l'API RESTful..."
+
+# --- Ajouter des logements ---
+echo "Ajout des logements..."
+curl -X POST "$BASE_URL/logements" -H "Content-Type: application/json" -d '{"Adresse": "8 rue Jean Dolent, 75014 Paris", "Téléphone": "0636021242", "Adresse_IP": "192.168.0.1"}'
+curl -X POST "$BASE_URL/logements" -H "Content-Type: application/json" -d '{"Adresse": "22 avenue Victor Hugo, 75016 Paris", "Téléphone": "0654321987", "Adresse_IP": "192.168.1.1"}'
+curl -X POST "$BASE_URL/logements" -H "Content-Type: application/json" -d '{"Adresse": "10 rue des Lilas, 59800 Lille", "Téléphone": "0765432109", "Adresse_IP": "192.168.2.1"}'
+curl -X POST "$BASE_URL/logements" -H "Content-Type: application/json" -d '{"Adresse": "14 chemin du Bocage, 44000 Nantes", "Téléphone": "0712345678", "Adresse_IP": "192.168.3.1"}'
+
+# --- Ajouter des pièces ---
+echo "Ajout des pièces..."
+curl -X POST "$BASE_URL/pieces" -H "Content-Type: application/json" -d '{"Nom": "Salon", "Localisation_X": 3.0, "Localisation_Y": 3.0, "Localisation_Z": 0, "ID_Logement": 1}'
+curl -X POST "$BASE_URL/pieces" -H "Content-Type: application/json" -d '{"Nom": "Cuisine", "Localisation_X": 1.0, "Localisation_Y": 1.0, "Localisation_Z": 0, "ID_Logement": 1}'
+curl -X POST "$BASE_URL/pieces" -H "Content-Type: application/json" -d '{"Nom": "Chambre", "Localisation_X": 4.5, "Localisation_Y": 5.0, "Localisation_Z": 0, "ID_Logement": 1}'
+curl -X POST "$BASE_URL/pieces" -H "Content-Type: application/json" -d '{"Nom": "Salle de bains", "Localisation_X": 6.0, "Localisation_Y": 2.0, "Localisation_Z": 0, "ID_Logement": 1}'
+curl -X POST "$BASE_URL/pieces" -H "Content-Type: application/json" -d '{"Nom": "Bureau", "Localisation_X": 2.0, "Localisation_Y": 4.5, "Localisation_Z": 0, "ID_Logement": 2}'
+
+# --- Ajouter des dispositifs ---
+echo "Ajout des dispositifs..."
+curl -X POST "$BASE_URL/devices" -H "Content-Type: application/json" -d '{"ID_Pièce": 1, "ID_Type": 3, "Référence_commerciale": "ELEC_3302", "Port_communication": "COM4"}'
+curl -X POST "$BASE_URL/devices" -H "Content-Type: application/json" -d '{"ID_Pièce": 2, "ID_Type": 1, "Référence_commerciale": "TEMP_2023", "Port_communication": "COM5"}'
+curl -X POST "$BASE_URL/devices" -H "Content-Type: application/json" -d '{"ID_Pièce": 3, "ID_Type": 5, "Référence_commerciale": "GAZ_2028", "Port_communication": "COM7"}'
+
+# --- Ajouter des mesures ---
+echo "Ajout des mesures..."
+curl -X POST "$BASE_URL/mesures" -H "Content-Type: application/json" -d '{"ID_Device": 1, "Valeur": 120.5, "Date_Insertion": "2024-11-20"}'
+curl -X POST "$BASE_URL/mesures" -H "Content-Type: application/json" -d '{"ID_Device": 2, "Valeur": 22.3, "Date_Insertion": "2024-11-20"}'
+curl -X POST "$BASE_URL/mesures" -H "Content-Type: application/json" -d '{"ID_Device": 3, "Valeur": 350.0, "Date_Insertion": "2024-11-20"}'
+
+# --- Ajouter des factures ---
+echo "Ajout des factures..."
+curl -X POST "$BASE_URL/factures" -H "Content-Type: application/json" -d '{"ID_Logement": 1, "Type_facture": "Électricité", "Date_facture": "2024-01-15", "Montant": 90.50, "Valeur_consommée": 250.0}'
+curl -X POST "$BASE_URL/factures" -H "Content-Type: application/json" -d '{"ID_Logement": 1, "Type_facture": "Eau", "Date_facture": "2024-02-01", "Montant": 45.00, "Valeur_consommée": 15.0}'
+curl -X POST "$BASE_URL/factures" -H "Content-Type: application/json" -d '{"ID_Logement": 1, "Type_facture": "Internet", "Date_facture": "2024-03-01", "Montant": 30.00, "Valeur_consommée": 0.0}'
+
+echo "Alimentation terminée !"
