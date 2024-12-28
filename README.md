@@ -20,7 +20,7 @@ Ce projet a été réalisé dans le cadre du **TP IoT**.
 
 ## 📷 Aperçu du Site
 
-![Aperçu du Site](frontend_Amina/mon-site-iot/public/site-preview.jpg)
+![Aperçu du Site](frontend_Amina/mon-site-iot/public/site-preview.png)
 
 Voici une capture d'écran du site fonctionnel, montrant la page d'accueil principale. L'interface est intuitive, moderne et adaptée aux écrans mobiles.
 
